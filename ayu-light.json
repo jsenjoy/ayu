@@ -88,7 +88,7 @@
 		"editorGroupHeader.tabsBackground": "#fafafa",
 		"editorGroupHeader.noTabsBackground": "#fafafa",
 		"editorGroupHeader.tabsBorder": "#e2e4e7",
-		"tab.activeBackground": "#fafafa",
+		"tab.activeBackground": "#f2f2f2",
 		"tab.inactiveBackground": "#fafafa",
 		"tab.activeForeground": "#5c6773",
 		"tab.inactiveForeground": "#828c99",
