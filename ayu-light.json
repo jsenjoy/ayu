@@ -189,7 +189,7 @@
 		},
 		{
 			"name": "Operator, Misc",
-			"scope": "constant.other.color, meta.tag, punctuation.separator.inheritance.php, punctuation.section.embedded, keyword.other.substitution",
+			"scope": "constant.other.color, meta.tag, punctuation.separator.inheritance.php, punctuation.section.embedded, punctuation.definition.block.js, keyword.other.substitution",
 			"settings": {
 				"foreground": "#E7C547"
 			}
@@ -210,7 +210,7 @@
 		},
 		{
 			"name": "Function, Special Method, Block Level",
-			"scope": "entity.name.function, keyword.other.special-method, variable.function, meta.block-level",
+			"scope": "entity.name.function, keyword.other.special-method, variable.function, meta.block-level, support.function.console.js, support.function.dom.js",
 			"settings": {
 				"foreground": "#F29718"
 			}
