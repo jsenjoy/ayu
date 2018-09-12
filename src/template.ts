@@ -565,6 +565,13 @@ export default (variant: SchemeName) => {
         }
       },
       {
+        'name': 'Elixir constants',
+        'scope': ['source.elixir variable.other.constant.elixir'],
+        'settings': {
+          'foreground': scheme.syntax.tag.hex
+        }
+      },
+      {
         'name': 'CSS tag names',
         'scope': ['source.css entity.name.tag', 'source.sass entity.name.tag', 'source.scss entity.name.tag', 'source.less entity.name.tag', 'source.stylus entity.name.tag'],
         'settings': {

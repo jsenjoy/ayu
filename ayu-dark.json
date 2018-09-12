@@ -508,6 +508,15 @@
 			}
 		},
 		{
+			"name": "Elixir constants",
+			"scope": [
+				"source.elixir variable.other.constant.elixir"
+			],
+			"settings": {
+				"foreground": "#39bae6"
+			}
+		},
+		{
 			"name": "CSS tag names",
 			"scope": [
 				"source.css entity.name.tag",
