@@ -395,6 +395,20 @@ export default (variant: SchemeName) => {
         }
       },
       {
+        'name': 'Keyword, Storage',
+        'scope': ['Keyword', 'Storage'],
+        'settings': {
+          'fontStyle': 'italic'
+        }
+      },
+      {
+        'name': 'Keyword Control',
+        'scope': ['keyword.control'],
+        'settings': {
+          'fontStyle': 'italic'
+        }
+      },
+      {
         'name': 'Operators',
         'scope': ['keyword.operator'],
         'settings': {
@@ -440,6 +454,7 @@ export default (variant: SchemeName) => {
         'name': 'Storage',
         'scope': ['storage'],
         'settings': {
+          'fontStyle': 'italic',
           'foreground': scheme.syntax.keyword.hex
         }
       },
@@ -494,6 +509,13 @@ export default (variant: SchemeName) => {
         }
       },
       {
+        'name': 'entity.name.method.js',
+        'scope': ['entity.name.method.js'],
+        'settings': {
+          'fontStyle': 'italic'
+        }
+      },
+      {
         'name': 'Tag',
         'scope': ['entity.name.tag', 'meta.tag.sgml'],
         'settings': {
@@ -512,6 +534,16 @@ export default (variant: SchemeName) => {
         'scope': ['entity.other.attribute-name'],
         'settings': {
           'foreground': scheme.syntax.func.hex
+        }
+      },
+      {
+        'name': 'HTML Attributes',
+        'scope': [
+          'text.html.basic entity.other.attribute-name.html',
+          'text.html.basic entity.other.attribute-name'
+        ],
+        'settings': {
+          'fontStyle': 'italic'
         }
       },
       {
@@ -611,6 +643,25 @@ export default (variant: SchemeName) => {
         'scope': ['message.error'],
         'settings': {
           'foreground': scheme.syntax.error.hex
+        }
+      },
+      {
+        'name': 'Decorators',
+        'scope': [
+          'tag.decorator.js entity.name.tag.js',
+          'tag.decorator.js punctuation.definition.tag.js'
+        ],
+        'settings': {
+          'fontStyle': 'italic'
+        }
+      },
+      {
+        'name': 'ES7 Bind Operator',
+        'scope': [
+          'source.js constant.other.object.key.js string.unquoted.label.js'
+        ],
+        'settings': {
+          'fontStyle': 'italic'
         }
       },
       {
