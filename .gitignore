@@ -2,7 +2,7 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-.vsix
+*.vsix
 # Thumbnails
 ._*
 
