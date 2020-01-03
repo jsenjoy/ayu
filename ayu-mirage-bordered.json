@@ -182,6 +182,15 @@
 	},
 	"tokenColors": [
 		{
+			"name": "Variable",
+			"scope": [
+				"variable"
+			],
+			"settings": {
+				"foreground": "#3853f0"
+			}
+		},
+		{
 			"settings": {
 				"background": "#1f2430",
 				"foreground": "#cbccc6"
