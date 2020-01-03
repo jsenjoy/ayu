@@ -1,17 +1,17 @@
 {
-  "name": "ayu",
-  "displayName": "Ayu",
-  "description": "A simple theme with bright colors and comes in three versions — dark, light and mirage for all day long comfortable work.",
+  "name": "ayu-blue",
+  "displayName": "Ayu Blue",
+  "description": "A simple theme with bright colors and blue higlight color and comes in three versions — dark, light and mirage for all day long comfortable work.",
   "version": "0.18.0",
-  "publisher": "teabyii",
+  "publisher": "LuanVSO",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jsenjoy/vscode-ayu"
+    "url": "https://github.com/LuanVSO/vscode-ayu-blue"
   },
   "bugs": {
-    "url": "https://github.com/jsenjoy/vscode-ayu/issues",
-    "email": "teabyii@gmail.com"
+    "url": "https://github.com/LuanVSO/vscode-ayu-blue/issues",
+    "email": "luanv.oliveira@outlook.com"
   },
   "engines": {
     "vscode": "^1.13.0"
@@ -24,37 +24,37 @@
     "theme",
     "ayu"
   ],
-  "homepage": "https://github.com/jsenjoy/vscode-ayu",
+  "homepage": "https://github.com/LuanVSO/vscode-ayu-blue",
   "icon": "assets/logo.png",
   "contributes": {
     "themes": [
       {
-        "label": "Ayu Dark",
+        "label": "Ayu Dark Blue",
         "uiTheme": "vs-dark",
         "path": "./ayu-dark.json"
       },
       {
-        "label": "Ayu Dark Bordered",
+        "label": "Ayu Dark blue Bordered",
         "uiTheme": "vs-dark",
         "path": "./ayu-dark-bordered.json"
       },
       {
-        "label": "Ayu Light",
+        "label": "Ayu Light blue",
         "uiTheme": "vs",
         "path": "./ayu-light.json"
       },
       {
-        "label": "Ayu Light Bordered",
+        "label": "Ayu Light blue Bordered",
         "uiTheme": "vs",
         "path": "./ayu-light-bordered.json"
       },
       {
-        "label": "Ayu Mirage",
+        "label": "Ayu Mirage blue",
         "uiTheme": "vs-dark",
         "path": "./ayu-mirage.json"
       },
       {
-        "label": "Ayu Mirage Bordered",
+        "label": "Ayu Mirage blue Bordered",
         "uiTheme": "vs-dark",
         "path": "./ayu-mirage-bordered.json"
       }
