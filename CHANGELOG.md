@@ -1,6 +1,6 @@
 # ayu theme for Visual Studio Code
 
-Source from: https://github.com/dempfi/ayu
+Source from: https://github.com/dempfi/ayu and https://github.com/ayu-theme/vscode-ayu
 
 ## 0.18.0
 
