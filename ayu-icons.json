@@ -1,4 +1,5 @@
 {
+  "$schema": "vscode://schemas/icon-theme",
   "iconDefinitions": {
     "_file": {
       "iconPath": "./icons/file_type_default@2x.png"

@@ -1,4 +1,5 @@
 {
+	"$schema": "vscode://schemas/color-theme",
 	"type": "dark",
 	"colors": {
 		"focusBorder": "#292d36",
