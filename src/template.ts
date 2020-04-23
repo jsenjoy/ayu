@@ -139,6 +139,8 @@ export default (variant: SchemeName, bordered: boolean) => {
 
       'editor.wordHighlightBackground': scheme.ui.selection.inactive.hex(),
       'editor.wordHighlightStrongBackground': scheme.common.accent.alpha(.2).hex(),
+      'editor.wordHighlightBorder': scheme.ui.selection.accent.hex(),
+      'editor.wordHighlightStrongBorder': scheme.ui.selection.accent.hex(),
 
       'editor.findMatchBackground': scheme.common.accent.alpha(.05).hex(),
       'editor.findMatchBorder': scheme.common.accent.hex(),

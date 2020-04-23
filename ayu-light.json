@@ -78,6 +78,8 @@
 		"editor.selectionHighlightBorder": "#dee8f1",
 		"editor.wordHighlightBackground": "#eff3f6",
 		"editor.wordHighlightStrongBackground": "#ff994033",
+		"editor.wordHighlightBorder": "#d9d7cd",
+		"editor.wordHighlightStrongBorder": "#ffcb65",
 		"editor.findMatchBackground": "#ff99400d",
 		"editor.findMatchBorder": "#ff9940",
 		"editor.findMatchHighlightBackground": "#ff99400d",
