@@ -334,6 +334,15 @@
 			}
 		},
 		{
+			"name": "JavaScript/TypeScript template literal punctuation",
+			"scope": [
+				"punctuation.definition.template-expression"
+			],
+			"settings": {
+				"foreground": "#fa8d3e"
+			}
+		},
+		{
 			"name": "Types fixes",
 			"scope": [
 				"source.java storage.type",

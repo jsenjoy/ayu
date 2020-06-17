@@ -465,6 +465,13 @@ export default (variant: SchemeName, bordered: boolean) => {
           'foreground': scheme.syntax.operator.hex()
         }
       },
+      {
+        'name': 'JavaScript/TypeScript template literal punctuation',
+        'scope': ['punctuation.definition.template-expression'],
+        'settings': {
+          'foreground': scheme.syntax.keyword.hex()
+        }
+      },
 
 
       // ------
