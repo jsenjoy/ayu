@@ -124,6 +124,10 @@ export default (variant: SchemeName, bordered: boolean) => {
 
       // MINIMAP
       'minimap.selectionHighlight': scheme.editor.selection.active.hex(),
+      'minimap.errorHighlight': scheme.syntax.error.hex(),
+      'minimapGutter.addedBackground': scheme.vcs.added.hex(),
+      'minimapGutter.modifiedBackground': scheme.vcs.modified.hex(),
+      'minimapGutter.deletedBackground': scheme.vcs.removed.hex(),
 
       // EDITOR GROUPS & TABS
       'editorGroup.border': scheme.ui.line.hex(),
@@ -161,6 +165,9 @@ export default (variant: SchemeName, bordered: boolean) => {
       'editor.wordHighlightStrongBorder': scheme.vcs.added.alpha(.5).hex(),
 
       // EDITOR SEARCH
+      // 'editor.findMatchBackground': '#FFEC8C25',
+      // 'editor.findMatchBorder': '#FFEC8C99',
+      // 'editor.findMatchHighlightBackground': '#FFEC8C25',
       'editor.findMatchBackground': scheme.common.accent.alpha(.05).hex(),
       'editor.findMatchBorder': scheme.common.accent.hex(),
       'editor.findMatchHighlightBackground': scheme.common.accent.alpha(.05).hex(),
@@ -214,13 +221,14 @@ export default (variant: SchemeName, bordered: boolean) => {
       'diffEditor.diagonalFill': scheme.ui.line.hex(),
 
       // EDITOR WIDGET
-      'editorWidget.background': scheme.ui.panel.bg.hex(),
-      'editorSuggestWidget.background': scheme.ui.panel.bg.hex(),
+      'editorWidget.background': bordered ? scheme.common.bg.hex() : scheme.ui.panel.bg.hex(),
+      'editorHoverWidget.background': bordered ? scheme.common.bg.hex() : scheme.ui.panel.bg.hex(),
+      'editorSuggestWidget.background': bordered ? scheme.common.bg.hex() : scheme.ui.panel.bg.hex(),
+      'editorWidget.border': scheme.ui.line.hex(),
+      'editorHoverWidget.border': scheme.ui.line.hex(),
       'editorSuggestWidget.border': scheme.ui.line.hex(),
       'editorSuggestWidget.highlightForeground': scheme.common.accent.hex(),
-      'editorSuggestWidget.selectedBackground': scheme.ui.line.hex(),
-      'editorHoverWidget.background': scheme.ui.panel.bg.hex(),
-      'editorHoverWidget.border': scheme.ui.line.hex(),
+      'editorSuggestWidget.selectedBackground': scheme.ui.selection.active.hex(),
 
       // DEBUG EXCEPTION
       'debugExceptionWidget.border': scheme.ui.line.hex(),
