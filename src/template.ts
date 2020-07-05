@@ -59,11 +59,13 @@ export default (variant: SchemeName, bordered: boolean) => {
       'dropdown.border': scheme.common.ui.fade(.7).hex(),
 
       // INPUT CONTROL
-      'input.background': scheme.ui.panel.bg.darken(.15).hex(),
-      'input.border': scheme.common.ui.fade(.7).hex(),
+      'input.background': bordered ? scheme.ui.panel.bg.hex() : scheme.common.bg.hex(),
+      'input.border': scheme.common.ui.alpha(.27).hex(),
       'input.foreground': scheme.common.fg.hex(),
       'input.placeholderForeground': scheme.common.ui.fade(.3).hex(),
-      'inputOption.activeBorder': scheme.common.accent.hex(),
+      'inputOption.activeBorder': (variant == 'light' ? scheme.common.accent.darken(.2) : scheme.common.accent).alpha(.3).hex(),
+      'inputOption.activeBackground': scheme.common.accent.alpha(0.2).hex(),
+      'inputOption.activeForeground': variant == 'light' ? scheme.common.accent.darken(.2).hex() : scheme.common.accent.hex(),
       'inputValidation.errorBackground': scheme.common.bg.hex(),
       'inputValidation.errorBorder': scheme.syntax.error.hex(),
       'inputValidation.infoBackground': scheme.common.bg.hex(),
@@ -102,8 +104,8 @@ export default (variant: SchemeName, bordered: boolean) => {
       'listFilterWidget.background': scheme.ui.panel.bg.hex(),
       'listFilterWidget.outline': scheme.common.accent.hex(),
       'listFilterWidget.noMatchesOutline': scheme.syntax.error.hex(),
-      'list.filterMatchBorder': scheme.common.accent.hex(),
-      'list.filterMatchBackground': scheme.common.accent.alpha(.05).hex(),
+      'list.filterMatchBorder': scheme.common.accent.alpha(.3).hex(),
+      'list.filterMatchBackground': scheme.common.accent.alpha(.15).hex(),
 
       // ACTIVITY BAR
       'activityBar.background': bordered ? scheme.ui.panel.bg.hex() : scheme.common.bg.hex(),
@@ -154,13 +156,13 @@ export default (variant: SchemeName, bordered: boolean) => {
       'editorLineNumber.activeForeground': scheme.editor.gutter.active.hex(),
       'editorCursor.foreground': scheme.common.accent.hex(),
 
-      // EDITOR SELECTION
+      // EDITOR SELECTIONS
       'editor.inactiveSelectionBackground': scheme.editor.selection.inactive.hex(),
       'editor.selectionBackground': scheme.editor.selection.active.hex(),
-      'editor.selectionHighlightBackground': scheme.vcs.added.alpha(.2).hex(),
-      'editor.selectionHighlightBorder': scheme.vcs.added.alpha(.05).hex(),
-      'editor.wordHighlightBackground': scheme.vcs.modified.alpha(.05).hex(),
-      'editor.wordHighlightStrongBackground': scheme.vcs.added.alpha(.05).hex(),
+      'editor.selectionHighlightBackground': scheme.vcs.added.alpha(.15).hex(),
+      'editor.selectionHighlightBorder': scheme.vcs.added.alpha(0).hex(),
+      'editor.wordHighlightBackground': scheme.vcs.modified.alpha(.08).hex(),
+      'editor.wordHighlightStrongBackground': scheme.vcs.added.alpha(.08).hex(),
       'editor.wordHighlightBorder': scheme.vcs.modified.alpha(.5).hex(),
       'editor.wordHighlightStrongBorder': scheme.vcs.added.alpha(.5).hex(),
 
@@ -168,12 +170,12 @@ export default (variant: SchemeName, bordered: boolean) => {
       // 'editor.findMatchBackground': '#FFEC8C25',
       // 'editor.findMatchBorder': '#FFEC8C99',
       // 'editor.findMatchHighlightBackground': '#FFEC8C25',
-      'editor.findMatchBackground': scheme.common.accent.alpha(.05).hex(),
-      'editor.findMatchBorder': scheme.common.accent.hex(),
-      'editor.findMatchHighlightBackground': scheme.common.accent.alpha(.05).hex(),
-      'editor.findMatchHighlightBorder': scheme.common.accent.alpha(.35).hex(),
-      'editor.findRangeHighlightBackground': scheme.editor.selection.inactive.hex(),
-      'editor.findRangeHighlightBorder': `${scheme.common.bg.hex()}00`,
+      'editor.findMatchBackground': scheme.editor.findMatch.active.hex(),
+      'editor.findMatchHighlightBackground': scheme.editor.findMatch.inactive.hex(),
+      'editor.findMatchBorder': scheme.editor.findMatch.active.hex(),
+      'editor.findMatchHighlightBorder': scheme.editor.findMatch.inactive.alpha(0).hex(),
+      // 'editor.findRangeHighlightBackground': '#fdff0033',
+      // 'editor.findRangeHighlightBorder': `${scheme.common.bg.hex()}00`,
 
       // 'editor.hoverHighlightBackground': '',
 
@@ -182,7 +184,7 @@ export default (variant: SchemeName, bordered: boolean) => {
 
       'editorLink.activeForeground': scheme.common.accent.hex(),
 
-      'editor.rangeHighlightBackground': scheme.editor.line.hex(),
+      'editor.rangeHighlightBackground': scheme.editor.findMatch.active.alpha(.1).hex(),
 
       'editorWhitespace.foreground': scheme.editor.gutter.normal.hex(),
 
@@ -192,8 +194,8 @@ export default (variant: SchemeName, bordered: boolean) => {
       'editorRuler.foreground': scheme.editor.indentGuide.normal.hex(),
       'editorCodeLens.foreground': scheme.syntax.comment.hex(),
 
-      'editorBracketMatch.background': scheme.vcs.added.alpha(.3).hex(),
-      'editorBracketMatch.border': scheme.vcs.added.alpha(0).hex(),
+      'editorBracketMatch.background': scheme.vcs.added.alpha(.2).hex(),
+      'editorBracketMatch.border': scheme.vcs.added.alpha(.3).hex(),
 
       // SNIPPETS
       'editor.snippetTabstopHighlightBackground': scheme.vcs.added.alpha(.2).hex(),
@@ -216,8 +218,8 @@ export default (variant: SchemeName, bordered: boolean) => {
       'editorGutter.deletedBackground': scheme.vcs.removed.alpha(.8).hex(),
 
       // DIFF EDITOR
-      'diffEditor.insertedTextBackground': scheme.vcs.added.alpha(.1).hex(),
-      'diffEditor.removedTextBackground': scheme.vcs.removed.alpha(.1).hex(),
+      'diffEditor.insertedTextBackground': scheme.vcs.added.alpha(.12).hex(),
+      'diffEditor.removedTextBackground': scheme.vcs.removed.alpha(.12).hex(),
       'diffEditor.diagonalFill': scheme.ui.line.hex(),
 
       // EDITOR WIDGET
@@ -238,15 +240,18 @@ export default (variant: SchemeName, bordered: boolean) => {
       'editorMarkerNavigation.background': scheme.ui.panel.bg.hex(),
 
       // PEEK VIEW
-      'peekView.border': scheme.ui.line.hex(),
-      'peekViewEditor.background': scheme.ui.panel.bg.hex(),
+      'peekView.border': scheme.common.accent.hex(),
+      'peekViewEditor.background': bordered ? scheme.common.bg.hex() : scheme.ui.panel.bg.hex(),
       'peekViewEditor.matchHighlightBackground': scheme.common.accent.alpha(.2).hex(),
       'peekViewResult.background': scheme.ui.panel.bg.hex(),
-      'peekViewResult.fileForeground': scheme.common.ui.hex(),
+      'peekViewResult.fileForeground': scheme.common.fg.hex(),
+      'peekViewResult.lineForeground': scheme.common.ui.hex(),
       'peekViewResult.matchHighlightBackground': scheme.common.accent.alpha(.2).hex(),
+      'peekViewResult.selectionBackground': scheme.editor.selection.active.hex(),
+      'peekViewResult.selectionForeground': scheme.common.fg.hex(),
       'peekViewTitle.background': scheme.ui.panel.bg.hex(),
       'peekViewTitleDescription.foreground': scheme.common.ui.hex(),
-      'peekViewTitleLabel.foreground': scheme.common.ui.hex(),
+      'peekViewTitleLabel.foreground': scheme.common.fg.hex(),
 
       // Merge Conflicts
       // 'merge.currentHeaderBackground': '?',
