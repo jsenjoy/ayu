@@ -1,5 +1,6 @@
 {
 	"type": "light",
+	"semanticHighlighting": true,
 	"colors": {
 		"focusBorder": "#bec1c6",
 		"foreground": "#8a9199",

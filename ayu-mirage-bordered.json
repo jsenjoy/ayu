@@ -1,5 +1,6 @@
 {
 	"type": "dark",
+	"semanticHighlighting": true,
 	"colors": {
 		"focusBorder": "#596171",
 		"foreground": "#707a8c",

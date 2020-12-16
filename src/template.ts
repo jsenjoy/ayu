@@ -27,6 +27,7 @@ export default (variant: SchemeName, bordered: boolean) => {
   const scheme = ayu[variant]
   return {
     'type': variant === 'light' ? 'light' : 'dark',
+    'semanticHighlighting': true,
     'colors': {
       // Colour reference https://code.visualstudio.com/docs/getstarted/theme-color-reference
 
