@@ -830,6 +830,36 @@ export default (variant: SchemeName, bordered: boolean) => {
           'background': scheme.common.fg.hex(),
           'foreground': scheme.syntax.comment.hex()
         }
+      },
+
+
+      // ------
+      // Additional scopes for semantic highlighting
+      // Adapted from the default dark theme for VS code:
+      // https://github.com/microsoft/vscode/blob/1.52.0/extensions/theme-defaults/themes/dark_vs.json
+      {
+        'scope': 'emphasis',
+        'settings': {
+          'fontStyle': 'italic'
+        }
+      },
+      {
+        'scope': 'strong',
+        'settings': {
+          'fontStyle': 'bold',
+        }
+      },
+      {
+        'scope': 'markup.underline',
+        'settings': {
+          'fontStyle': 'underline'
+        }
+      },
+      {
+        'scope': 'markup.italic',
+        'settings': {
+          'fontStyle': 'italic'
+        }
       }
     ]
   }
